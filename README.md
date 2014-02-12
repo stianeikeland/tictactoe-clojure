@@ -2,7 +2,7 @@
 
 TicTacToe written in ~2.5 hours at Bergen Coding Dojo in Clojure (12th feb 2014). Uses Quil w/OpenGL.
 
-Regular Tic-tac-toe is impossible to lose, this one has a 3D-rotating board - which makes it a bit harder.
+Regular Tic-tac-toe is impossible to lose, this one has a 3D-rotating board - which makes it a bit harder. Which way is up? :)
 
 ![tictactoe](http://www.eikeland.se/other/tictactoe.png)
 
