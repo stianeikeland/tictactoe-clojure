@@ -57,6 +57,7 @@
   (translate 400 400 0)
   (rotate-x (/ @tick 50))
   (rotate-y (/ @tick 75))
+  (rotate-z (/ @tick 125))
   (translate -200 -200 0)
   (doseq [boxid (range 9)]
          (draw-box boxid))
