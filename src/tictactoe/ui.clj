@@ -1,6 +1,6 @@
 (ns tictactoe.ui
-  (:use [clojure.string]
-        [quil.core]
+  (:require [clojure.string])
+  (:use [quil.core]
         [tictactoe.core]))
 
 (def emptyboard [nil nil nil
@@ -8,10 +8,7 @@
                  nil nil nil])
 
 (def board (atom emptyboard))
-
 (def tick (atom 0))
-
-(def rotate-tick (atom 0))
 
 (defn setup []
   (smooth)
@@ -58,18 +55,17 @@
   (text-size 28)
   (text (str "Player " (clojure.string/upper-case (name (turn @board)))) 50 50)
   (translate 400 400 0)
-  ;(rotate-x (/ @tick 50))
-  ;(rotate-y (/ @tick 75))
+  (rotate-x (/ @tick 50))
+  (rotate-y (/ @tick 75))
   (translate -200 -200 0)
   (doseq [boxid (range 9)]
          (draw-box boxid))
   (pop-matrix))
 
-(defsketch tictactoe
-  :title "Tic Tac Toe"
-  :setup setup
-  :draw draw
-  :key-pressed key-press
-  :size [800 800]
-  :renderer :opengl)
-
+(defn -main []
+  (sketch :title "Tic Tac Toe"
+          :setup setup
+          :draw draw
+          :key-pressed key-press
+          :size [800 800]
+          :renderer :opengl))

@@ -6,4 +6,5 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [quil "1.6.0"]]
   :profiles {:dev {:dependencies [[midje "1.6.0"]]
-                   :plugins [[lein-midje "3.1.1"]]}})
+                   :plugins [[lein-midje "3.1.1"]]}}
+  :main tictactoe.ui)
